@@ -1,0 +1,11 @@
+# Compiled Python files
+__pycache__/
+
+# Logs
+*.log
+
+# macOS files to ignore
+.DS_Store
+
+# Virtual environment
+venv/
