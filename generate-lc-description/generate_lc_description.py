@@ -6,13 +6,12 @@ from bs4 import BeautifulSoup
 import sys
 import os
 
-def fetch_leetcode_description(question_slug):
+def fetch_leetcode_description(url):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     driver = webdriver.Chrome(options=options)
 
     try:
-        url = f'https://leetcode.com/problems/{question_slug}/'
         driver.get(url)
 
         wait = WebDriverWait(driver, 10)
@@ -45,8 +44,9 @@ if __name__ == '__main__':
     # Title converted to lower case, split by space, joined by - to generate quesiton slug
     question_slug = "-".join(title.lower().split())  
 
-    description = fetch_leetcode_description(question_slug)
+    url = f'https://leetcode.com/problems/{question_slug}/'
 
+    description = fetch_leetcode_description(url)
     
     dir_path = f"{question_slug}"
 
@@ -58,7 +58,7 @@ if __name__ == '__main__':
     # Create file
     file = open(f'{dir_path}/description.md', "w")
 
-    file_content = [f'<h2> {title} </h2> \n', "<hr>", description]
+    file_content = [f'<a href="{url}"><h2> {title} </h2></a>\n', "<hr>", description]
 
     file.writelines(file_content)
      
