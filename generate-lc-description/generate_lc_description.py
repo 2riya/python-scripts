@@ -58,7 +58,7 @@ if __name__ == '__main__':
     # Create file
     file = open(f'{dir_path}/description.md', "w")
 
-    file_content = [f'<a href="{url}" target="_blank"><h2> {title} </h2></a>\n', "<hr>", description]
+    file_content = [f'<h2><a href="{url}" target="_blank">{title}</a></h2>\n', "<hr>", description]
 
     file.writelines(file_content)
      
