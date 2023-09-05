@@ -31,7 +31,7 @@ python3 generate_lc_description.py "Two Sum"
 
 _References_ -
 <ul>
-    <li>To fetch element in absense of ID:<br>
+    <li>To fetch element in absence of ID:<br>
     (Here, xpath is used)<br>
     <a>https://stackoverflow.com/questions/57262217/how-do-you-use-ec-presence-of-element-locatedby-id-mydynamicelement-excep</a>
     </li>
