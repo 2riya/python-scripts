@@ -48,23 +48,7 @@ if __name__ == '__main__':
 
     description = fetch_leetcode_description(url)
     
-    #dir_path = f"{question_slug}"
-
-    dir_path = f"/Users/rjain/personal/dsa/leetcode/{question_slug}"
-
-    #dir_path = f"/Users/rjain/personal/dsa/main/arrays/{question_slug}"
-
-    # dir_path = f"/Users/rjain/personal/dsa/main/linked-lists/{question_slug}"
-
-    # dir_path = f"/Users/rjain/personal/dsa/main/stack-and-queue/{question_slug}"
-
-    #dir_path = f"/Users/rjain/personal/dsa/main/bfs-in-a-grid/{question_slug}"
-
-    # dir_path = f"/Users/rjain/personal/dsa/main/backtracking/{question_slug}"
-
-    # dir_path = f"/Users/rjain/personal/dsa/main/dp-on-strings/{question_slug}"
-
-    # dir_path = f"/Users/rjain/personal/dsa/main/dp/{question_slug}"
+    dir_path = f"{question_slug}"
 
     # Create directory if not present
     if not os.path.isdir(dir_path):
